@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "local-semantic-cache",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-08",
+  "d1_databases": [
+    {
+      "binding": "CACHE_DB",
+      "database_name": "local-semantic-cache",
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "RESPONSE_CACHE",
+      "id": "00000000000000000000000000000000"
+    }
+  ],
+  "vars": {
+    "OLLAMA_URL": "http://127.0.0.1:11434",
+    "EMBEDDING_MODEL": "all-minilm",
+    "SIMILARITY_THRESHOLD": "0.90",
+    "DEFAULT_TTL_SECONDS": "86400",
+    "SUBJECT_ONNX_ENABLED": "false",
+    "SUBJECT_MODEL": "Xenova/all-MiniLM-L6-v2"
+  }
+}
