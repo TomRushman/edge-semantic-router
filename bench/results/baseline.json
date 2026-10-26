@@ -1,0 +1,7 @@
+{
+  "generatedAt": "2026-10-26T11:30:33.405Z",
+  "model": "all-minilm",
+  "status": "not-measured",
+  "reason": "fetch failed",
+  "note": "No measured output was produced. Start Ollama, pull all-minilm, then rerun npm run benchmark."
+}

@@ -2,3 +2,27 @@ node_modules/
 .wrangler/
 worker-configuration.d.ts
 .DS_Store
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.secret
+*.secrets
+*.credentials
+*.token
+secrets/
+credentials/
+
+# Local runtime and test output
+.cache/
+.runtime/
+coverage/
+tmp/
+*.log
+*.sqlite
+*.sqlite3

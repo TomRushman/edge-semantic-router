@@ -1,6 +1,6 @@
 # Local semantic cache
 
-A local-first semantic prompt/response cache using the Cloudflare Workers runtime, locally simulated D1 and KV bindings, and Ollama embeddings. Requests are first bucketed into ten subjects (billing, auth, API, account, technical, integrations, security, shipping, usage, or general). High-confidence keywords use regex; an optional local ONNX model from `@huggingface/transformers` classifies the remainder. It does not require a Cloudflare account and does not contact Cloudflare.
+A local-first semantic prompt/response cache using the Cloudflare Workers runtime, locally simulated D1 and KV bindings, and Ollama embeddings. Requests are first bucketed into five support subjects: accounting, accounts, billing, contact, or general. High-confidence keywords use regex; an optional local ONNX model from `@huggingface/transformers` classifies the remainder. It does not require a Cloudflare account and does not contact Cloudflare.
 
 Vectorize and Workers AI do not have local simulations. During development, D1 stores vectors and the Worker performs an exhaustive cosine-similarity scan. The exported `embed`, `queryVectors`, `upsertVector`, and `deleteVector` functions are the narrow seams to replace with Workers AI and Vectorize for a future cloud deployment.
 
@@ -60,6 +60,25 @@ npm run check
 ```
 
 Tests run inside Cloudflare's local Worker runtime with isolated D1/KV storage and mocked deterministic embeddings. For a real-model smoke test, run Ollama and repeat the store/lookup commands above.
+
+## Benchmark
+
+The compact local benchmark uses a pinned, attributed subset of PolyAI's BANKING77 test split and a reviewed fixture of safe paraphrases and dangerous near-matches. It reports exact and semantic hits, misses, useful hit rate, precision, recall, false-hit rate, false-miss rate, namespace leakage, threshold sweep results, and embedding p50/p95 latency. BANKING77 intent labels approximate answer equivalence, so they do not replace product review.
+
+```sh
+npm run benchmark:fetch  # optional: refresh the pinned subset and checksum it
+ollama pull all-minilm
+npm run benchmark
+```
+
+The runner never changes `SIMILARITY_THRESHOLD`. See [`bench/README.md`](bench/README.md) and [`docs/semantic-cache-benchmark.md`](docs/semantic-cache-benchmark.md) for the source revision, fixture policy, and report interpretation.
+
+Project artifacts:
+
+- [Interactive architecture figure](architecture/semantic-cache-light.html), [dark theme](architecture/semantic-cache.html), [animated GIF](architecture/semantic-cache-route.gif), and [static PNG fallback](architecture/semantic-cache-route.png)
+- [Reviewed golden set](bench/golden.jsonl), [pinned subset metadata](bench/source.json), and [benchmark report](bench/results/latest.md)
+- [Benchmark guide](bench/README.md) and [tutorial draft](docs/semantic-cache-benchmark.md)
+- [Pinned BANKING77 source revision](https://github.com/PolyAI-LDN/task-specific-datasets/tree/57ec275d8078af65b7731c2a98be812d844a6d6b/banking_data), [Hugging Face dataset card](https://huggingface.co/datasets/PolyAI/banking77), and [dataset paper](https://aclanthology.org/2020.nlp4convai-1.5/)
 
 ## Future Cloudflare migration
 

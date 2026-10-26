@@ -1,0 +1,10 @@
+{
+  "dataset": "BANKING77",
+  "license": "CC BY 4.0",
+  "source": "https://github.com/PolyAI-LDN/task-specific-datasets/tree/57ec275d8078af65b7731c2a98be812d844a6d6b/banking_data",
+  "rawTestCsv": "https://raw.githubusercontent.com/PolyAI-LDN/task-specific-datasets/57ec275d8078af65b7731c2a98be812d844a6d6b/banking_data/test.csv",
+  "revision": "57ec275d8078af65b7731c2a98be812d844a6d6b",
+  "selection": "first three test rows per selected intent, in the listed intent order, preserving source row order",
+  "selectedIntents": ["card_arrival", "card_linking", "exchange_rate", "card_payment_wrong_exchange_rate", "extra_charge_on_statement", "pending_cash_withdrawal", "fiat_currency_support", "card_delivery_estimate", "automatic_top_up", "card_not_working", "exchange_via_app"],
+  "subsetSha256": "d2cf2393d161b4e7bca554fb35ce934855b139f1fc4f99036437a4c09d828798"
+}

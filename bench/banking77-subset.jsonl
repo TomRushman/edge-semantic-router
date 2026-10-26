@@ -1,0 +1,33 @@
+{"sourceId":"test.csv:2","intent":"card_arrival","subject":"general","text":"I still have not received my new card, I ordered over a week ago."}
+{"sourceId":"test.csv:3","intent":"card_arrival","subject":"general","text":"I ordered a card but it has not arrived. Help please!"}
+{"sourceId":"test.csv:4","intent":"card_arrival","subject":"general","text":"Is there a way to know when my card will arrive?"}
+{"sourceId":"test.csv:42","intent":"card_linking","subject":"accounts","text":"Why won't my card show up on the app?"}
+{"sourceId":"test.csv:43","intent":"card_linking","subject":"accounts","text":"I would like to reactivate my card."}
+{"sourceId":"test.csv:44","intent":"card_linking","subject":"accounts","text":"Where do I link the new card?"}
+{"sourceId":"test.csv:82","intent":"exchange_rate","subject":"accounting","text":"I need to know your exchange rates."}
+{"sourceId":"test.csv:83","intent":"exchange_rate","subject":"accounting","text":"What exchange rates do you offer?"}
+{"sourceId":"test.csv:84","intent":"exchange_rate","subject":"accounting","text":"How did you come up with your exchange rates?"}
+{"sourceId":"test.csv:121","intent":"card_payment_wrong_exchange_rate","subject":"accounting","text":"I purchased something in a foreign currency but the rate applied is wrong."}
+{"sourceId":"test.csv:122","intent":"card_payment_wrong_exchange_rate","subject":"accounting","text":"I made a currency exchange and think I was charged more than I should of been."}
+{"sourceId":"test.csv:123","intent":"card_payment_wrong_exchange_rate","subject":"accounting","text":"the card payment exchange rate is wrong"}
+{"sourceId":"test.csv:161","intent":"extra_charge_on_statement","subject":"accounting","text":"My statement has a dollar I have been charged showing up on it."}
+{"sourceId":"test.csv:162","intent":"extra_charge_on_statement","subject":"accounting","text":"Why is there a fee for an extra pound in my statement?"}
+{"sourceId":"test.csv:163","intent":"extra_charge_on_statement","subject":"accounting","text":"I'm not okay with this fee on my statement."}
+{"sourceId":"test.csv:202","intent":"pending_cash_withdrawal","subject":"billing","text":"My card was denied at an ATM earlier today but the transaction is pending. Please cancel it as I did not receive my money."}
+{"sourceId":"test.csv:203","intent":"pending_cash_withdrawal","subject":"billing","text":"My transaction is still showing that is pending from my cash withdrawal."}
+{"sourceId":"test.csv:204","intent":"pending_cash_withdrawal","subject":"billing","text":"Hey I tried to get some money out earlier but the machine didn't work. Now just saw the transaction still seems in progress! Can you please check what's going there, seems something is broken, I don't want to be charged for money that I haven't actually received!"}
+{"sourceId":"test.csv:241","intent":"fiat_currency_support","subject":"contact","text":"If I request that my funds be held, what currencies do you use?"}
+{"sourceId":"test.csv:242","intent":"fiat_currency_support","subject":"contact","text":"I want to know how many different currencies my money can be in"}
+{"sourceId":"test.csv:243","intent":"fiat_currency_support","subject":"contact","text":"Do you support all fiat currencies?"}
+{"sourceId":"test.csv:281","intent":"card_delivery_estimate","subject":"general","text":"I need my card now!"}
+{"sourceId":"test.csv:282","intent":"card_delivery_estimate","subject":"general","text":"my card was not in the mail again can you advise?"}
+{"sourceId":"test.csv:283","intent":"card_delivery_estimate","subject":"general","text":"i need my card quick"}
+{"sourceId":"test.csv:321","intent":"automatic_top_up","subject":"billing","text":"When traveling, can I auto top-up my card at certain times?"}
+{"sourceId":"test.csv:322","intent":"automatic_top_up","subject":"billing","text":"Is there a limit when using auto top-up?"}
+{"sourceId":"test.csv:323","intent":"automatic_top_up","subject":"billing","text":"Will it automatically top-up or do I need to do that manually if there isn't much cash left?"}
+{"sourceId":"test.csv:362","intent":"card_not_working","subject":"general","text":"I can't get my card to work."}
+{"sourceId":"test.csv:363","intent":"card_not_working","subject":"general","text":"My card appears to be broken how can I fix it?"}
+{"sourceId":"test.csv:364","intent":"card_not_working","subject":"general","text":"How do I know why my card isn't working?"}
+{"sourceId":"test.csv:401","intent":"exchange_via_app","subject":"general","text":"May I exchange currencies with this?"}
+{"sourceId":"test.csv:402","intent":"exchange_via_app","subject":"general","text":"Tell me how I can exchange between different currency."}
+{"sourceId":"test.csv:403","intent":"exchange_via_app","subject":"general","text":"Can I change from one currency to another?"}

@@ -1,20 +1,14 @@
 export const SUBJECTS = [
-  "billing", "auth", "api", "account", "technical",
-  "integrations", "security", "shipping", "usage", "general",
+  "accounting", "accounts", "billing", "contact", "general",
 ] as const;
 export type Subject = (typeof SUBJECTS)[number];
 type SubjectClassifier = (text: string) => Promise<string>;
 
 const RULES: readonly [Subject, RegExp][] = [
-  ["billing", /\b(invoice|invoices|bill|billing|charged|charge|payment|refund|receipt|subscription|plan|price|pricing)\b/iu],
-  ["auth", /\b(password|reset|login|log in|sign in|signin|logout|two[- ]factor|2fa|otp|verification|verify)\b/iu],
-  ["api", /\b(api|endpoint|sdk|webhook|openapi|swagger|curl|documentation|docs)\b/iu],
-  ["account", /\b(account|profile|email address|organization|workspace|team|member|invite)\b/iu],
-  ["technical", /\b(error|bug|broken|failure|timeout|crash|not working|install|configure|configuration)\b/iu],
-  ["integrations", /\b(integration|integrate|slack|salesforce|hubspot|zapier|plugin|connect)\b/iu],
-  ["security", /\b(security|breach|vulnerability|permission|permissions|role|access|encryption|privacy)\b/iu],
-  ["shipping", /\b(ship|shipping|delivery|delivered|tracking|order|warehouse|address)\b/iu],
-  ["usage", /\b(usage|quota|limit|limits|rate limit|capacity|tokens|consumption|analytics|metrics)\b/iu],
+  ["accounting", /\b(invoice|invoices|receipt|receipts|tax|ledger|reconcil|statement|export|exchange rate|currency exchange)\b/iu],
+  ["accounts", /\b(account|profile|email address|organization|workspace|team|member|invite|password|reset|login|log in|sign in|signin|logout|two[- ]factor|2fa|otp|verification|verify|personal details)\b/iu],
+  ["billing", /\b(bill|billing|charged|charge|payment|refund|subscription|plan|price|pricing|fee|cost|top[- ]?up|cash withdrawal)\b/iu],
+  ["contact", /\b(contact|support|support email|help desk|help centre|help center|email us|call us|phone number|opening hours|business hours|country|countries)\b/iu],
 ];
 
 export function subjectFromRules(text: string): Subject | null {

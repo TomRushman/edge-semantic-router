@@ -35,9 +35,11 @@ beforeEach(async () => {
 
 describe("cache primitives", () => {
   it("routes common requests into subject buckets", () => {
-    expect(subjectFromRules("Where can I see my invoice?")).toBe("billing");
-    expect(subjectFromRules("How do I reset my password?")).toBe("auth");
-    expect(subjectFromRules("Where are the API docs for command X?")).toBe("api");
+    expect(subjectFromRules("Where can I see my invoice?")).toBe("accounting");
+    expect(subjectFromRules("Where can I download my invoice receipt?")).toBe("accounting");
+    expect(subjectFromRules("How do I reset my password?")).toBe("accounts");
+    expect(subjectFromRules("How do I contact support?")).toBe("contact");
+    expect(subjectFromRules("Where are the API docs for command X?")).toBeNull();
     expect(subjectFromRules("Tell me something else")).toBeNull();
   });
 

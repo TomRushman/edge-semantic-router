@@ -1,0 +1,635 @@
+{
+  "generatedAt": "2026-10-26T14:57:20.811Z",
+  "model": "all-minilm",
+  "status": "measured",
+  "dataset": {
+    "rows": 33,
+    "sha256": "d2cf2393d161b4e7bca554fb35ce934855b139f1fc4f99036437a4c09d828798",
+    "revision": "57ec275d8078af65b7731c2a98be812d844a6d6b"
+  },
+  "summary": {
+    "total": 30,
+    "exactHits": 1,
+    "semanticHits": 2,
+    "misses": 27,
+    "usefulHits": 3,
+    "usefulHitRate": 0.1,
+    "precision": 1,
+    "recall": 0.3,
+    "falseHitRate": 0,
+    "falseMissRate": 0.7,
+    "namespaceLeaks": 0,
+    "p50Ms": 7.307042000000024,
+    "p95Ms": 10.678632999999953,
+    "latencyByKind": {
+      "exact": {
+        "p50Ms": null,
+        "p95Ms": null
+      },
+      "semantic": {
+        "p50Ms": 7.215687000000003,
+        "p95Ms": 7.594568099999992
+      },
+      "miss": {
+        "p50Ms": 7.307042000000024,
+        "p95Ms": 10.862370499999956
+      }
+    }
+  },
+  "summaryBySplit": {
+    "dev": {
+      "total": 26,
+      "exactHits": 0,
+      "semanticHits": 2,
+      "misses": 24,
+      "usefulHits": 2,
+      "usefulHitRate": 0.07692307692307693,
+      "precision": 1,
+      "recall": 0.2222222222222222,
+      "falseHitRate": 0,
+      "falseMissRate": 0.7777777777777778,
+      "namespaceLeaks": 0,
+      "p50Ms": 7.288458500000019,
+      "p95Ms": 9.383614499999965,
+      "latencyByKind": {
+        "exact": {
+          "p50Ms": null,
+          "p95Ms": null
+        },
+        "semantic": {
+          "p50Ms": 7.215687000000003,
+          "p95Ms": 7.594568099999992
+        },
+        "miss": {
+          "p50Ms": 7.288458500000019,
+          "p95Ms": 9.460651899999958
+        }
+      }
+    },
+    "test": {
+      "total": 4,
+      "exactHits": 1,
+      "semanticHits": 0,
+      "misses": 3,
+      "usefulHits": 1,
+      "usefulHitRate": 0.25,
+      "precision": 1,
+      "recall": 1,
+      "falseHitRate": 0,
+      "falseMissRate": 0,
+      "namespaceLeaks": 0,
+      "p50Ms": 8.173584000000005,
+      "p95Ms": 11.089583099999965,
+      "latencyByKind": {
+        "exact": {
+          "p50Ms": null,
+          "p95Ms": null
+        },
+        "semantic": {
+          "p50Ms": null,
+          "p95Ms": null
+        },
+        "miss": {
+          "p50Ms": 8.173584000000005,
+          "p95Ms": 11.089583099999965
+        }
+      }
+    }
+  },
+  "namespaceIsolation": [
+    {
+      "id": "test-namespace-same-subject",
+      "returnedHit": false,
+      "expectedMiss": true
+    },
+    {
+      "id": "test-namespace-same-prompt",
+      "returnedHit": false,
+      "expectedMiss": true
+    }
+  ],
+  "banking77": {
+    "summary": {
+      "total": 32,
+      "exactHits": 0,
+      "semanticHits": 1,
+      "misses": 31,
+      "usefulHits": 1,
+      "usefulHitRate": 0.03125,
+      "precision": 1,
+      "recall": 0.045454545454545456,
+      "falseHitRate": 0,
+      "falseMissRate": 0.9545454545454546,
+      "namespaceLeaks": 0,
+      "p50Ms": 7.650249999999971,
+      "p95Ms": 8.492446199999995,
+      "latencyByKind": {
+        "exact": {
+          "p50Ms": null,
+          "p95Ms": null
+        },
+        "semantic": {
+          "p50Ms": 7.286333000000013,
+          "p95Ms": 7.286333000000013
+        },
+        "miss": {
+          "p50Ms": 7.705457999999908,
+          "p95Ms": 8.493291999999997
+        }
+      }
+    },
+    "note": "Same-intent pairs count as expected hits and adjacent cross-intent pairs count as expected misses. BANKING77 intent labels approximate answer interchangeability and require product review."
+  },
+  "thresholds": [
+    {
+      "threshold": 0.7,
+      "precision": 0.75,
+      "recall": 0.6666666666666666,
+      "falseHitRate": 0.2857142857142857,
+      "falseMissRate": 0.3333333333333333,
+      "returnedHits": 8
+    },
+    {
+      "threshold": 0.71,
+      "precision": 0.75,
+      "recall": 0.6666666666666666,
+      "falseHitRate": 0.2857142857142857,
+      "falseMissRate": 0.3333333333333333,
+      "returnedHits": 8
+    },
+    {
+      "threshold": 0.72,
+      "precision": 0.75,
+      "recall": 0.6666666666666666,
+      "falseHitRate": 0.2857142857142857,
+      "falseMissRate": 0.3333333333333333,
+      "returnedHits": 8
+    },
+    {
+      "threshold": 0.73,
+      "precision": 0.75,
+      "recall": 0.6666666666666666,
+      "falseHitRate": 0.2857142857142857,
+      "falseMissRate": 0.3333333333333333,
+      "returnedHits": 8
+    },
+    {
+      "threshold": 0.74,
+      "precision": 0.75,
+      "recall": 0.6666666666666666,
+      "falseHitRate": 0.2857142857142857,
+      "falseMissRate": 0.3333333333333333,
+      "returnedHits": 8
+    },
+    {
+      "threshold": 0.75,
+      "precision": 0.8571428571428571,
+      "recall": 0.6666666666666666,
+      "falseHitRate": 0.14285714285714285,
+      "falseMissRate": 0.3333333333333333,
+      "returnedHits": 7
+    },
+    {
+      "threshold": 0.76,
+      "precision": 0.8571428571428571,
+      "recall": 0.6666666666666666,
+      "falseHitRate": 0.14285714285714285,
+      "falseMissRate": 0.3333333333333333,
+      "returnedHits": 7
+    },
+    {
+      "threshold": 0.77,
+      "precision": 0.8571428571428571,
+      "recall": 0.6666666666666666,
+      "falseHitRate": 0.14285714285714285,
+      "falseMissRate": 0.3333333333333333,
+      "returnedHits": 7
+    },
+    {
+      "threshold": 0.78,
+      "precision": 0.75,
+      "recall": 0.3333333333333333,
+      "falseHitRate": 0.14285714285714285,
+      "falseMissRate": 0.6666666666666666,
+      "returnedHits": 4
+    },
+    {
+      "threshold": 0.79,
+      "precision": 0.6666666666666666,
+      "recall": 0.2222222222222222,
+      "falseHitRate": 0.14285714285714285,
+      "falseMissRate": 0.7777777777777778,
+      "returnedHits": 3
+    },
+    {
+      "threshold": 0.8,
+      "precision": 0.6666666666666666,
+      "recall": 0.2222222222222222,
+      "falseHitRate": 0.14285714285714285,
+      "falseMissRate": 0.7777777777777778,
+      "returnedHits": 3
+    },
+    {
+      "threshold": 0.81,
+      "precision": 1,
+      "recall": 0.2222222222222222,
+      "falseHitRate": 0,
+      "falseMissRate": 0.7777777777777778,
+      "returnedHits": 2
+    },
+    {
+      "threshold": 0.82,
+      "precision": 1,
+      "recall": 0.1111111111111111,
+      "falseHitRate": 0,
+      "falseMissRate": 0.8888888888888888,
+      "returnedHits": 1
+    },
+    {
+      "threshold": 0.83,
+      "precision": 1,
+      "recall": 0.1111111111111111,
+      "falseHitRate": 0,
+      "falseMissRate": 0.8888888888888888,
+      "returnedHits": 1
+    },
+    {
+      "threshold": 0.84,
+      "precision": 1,
+      "recall": 0.1111111111111111,
+      "falseHitRate": 0,
+      "falseMissRate": 0.8888888888888888,
+      "returnedHits": 1
+    },
+    {
+      "threshold": 0.85,
+      "precision": 1,
+      "recall": 0.1111111111111111,
+      "falseHitRate": 0,
+      "falseMissRate": 0.8888888888888888,
+      "returnedHits": 1
+    },
+    {
+      "threshold": 0.86,
+      "precision": 1,
+      "recall": 0.1111111111111111,
+      "falseHitRate": 0,
+      "falseMissRate": 0.8888888888888888,
+      "returnedHits": 1
+    },
+    {
+      "threshold": 0.87,
+      "precision": 1,
+      "recall": 0.1111111111111111,
+      "falseHitRate": 0,
+      "falseMissRate": 0.8888888888888888,
+      "returnedHits": 1
+    },
+    {
+      "threshold": 0.88,
+      "precision": 1,
+      "recall": 0.1111111111111111,
+      "falseHitRate": 0,
+      "falseMissRate": 0.8888888888888888,
+      "returnedHits": 1
+    },
+    {
+      "threshold": 0.89,
+      "precision": 1,
+      "recall": 0.1111111111111111,
+      "falseHitRate": 0,
+      "falseMissRate": 0.8888888888888888,
+      "returnedHits": 1
+    },
+    {
+      "threshold": 0.9,
+      "precision": 1,
+      "recall": 0.1111111111111111,
+      "falseHitRate": 0,
+      "falseMissRate": 0.8888888888888888,
+      "returnedHits": 1
+    },
+    {
+      "threshold": 0.91,
+      "precision": 1,
+      "recall": 0.1111111111111111,
+      "falseHitRate": 0,
+      "falseMissRate": 0.8888888888888888,
+      "returnedHits": 1
+    },
+    {
+      "threshold": 0.92,
+      "precision": 0,
+      "recall": 0,
+      "falseHitRate": 0,
+      "falseMissRate": 1,
+      "returnedHits": 0
+    },
+    {
+      "threshold": 0.93,
+      "precision": 0,
+      "recall": 0,
+      "falseHitRate": 0,
+      "falseMissRate": 1,
+      "returnedHits": 0
+    },
+    {
+      "threshold": 0.94,
+      "precision": 0,
+      "recall": 0,
+      "falseHitRate": 0,
+      "falseMissRate": 1,
+      "returnedHits": 0
+    },
+    {
+      "threshold": 0.95,
+      "precision": 0,
+      "recall": 0,
+      "falseHitRate": 0,
+      "falseMissRate": 1,
+      "returnedHits": 0
+    },
+    {
+      "threshold": 0.96,
+      "precision": 0,
+      "recall": 0,
+      "falseHitRate": 0,
+      "falseMissRate": 1,
+      "returnedHits": 0
+    },
+    {
+      "threshold": 0.97,
+      "precision": 0,
+      "recall": 0,
+      "falseHitRate": 0,
+      "falseMissRate": 1,
+      "returnedHits": 0
+    },
+    {
+      "threshold": 0.98,
+      "precision": 0,
+      "recall": 0,
+      "falseHitRate": 0,
+      "falseMissRate": 1,
+      "returnedHits": 0
+    },
+    {
+      "threshold": 0.99,
+      "precision": 0,
+      "recall": 0,
+      "falseHitRate": 0,
+      "falseMissRate": 1,
+      "returnedHits": 0
+    }
+  ],
+  "selectedThreshold": {
+    "threshold": 0.81,
+    "precision": 1,
+    "recall": 0.2222222222222222,
+    "falseHitRate": 0,
+    "falseMissRate": 0.7777777777777778,
+    "returnedHits": 2
+  },
+  "cases": [
+    {
+      "id": "dev-billing-refund-safe",
+      "expectedHit": true,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 11.41358299999996
+    },
+    {
+      "id": "dev-billing-refund-danger",
+      "expectedHit": false,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 8.805834000000004
+    },
+    {
+      "id": "dev-billing-fee-danger",
+      "expectedHit": false,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 8.173584000000005
+    },
+    {
+      "id": "dev-billing-amount-danger",
+      "expectedHit": false,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 7.995584000000008
+    },
+    {
+      "id": "dev-account-password-safe",
+      "expectedHit": true,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 7.716791999999998
+    },
+    {
+      "id": "dev-account-password-danger",
+      "expectedHit": false,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 7.994541999999967
+    },
+    {
+      "id": "dev-account-personal-danger",
+      "expectedHit": false,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 6.978707999999983
+    },
+    {
+      "id": "dev-account-login-danger",
+      "expectedHit": false,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 7.205417000000011
+    },
+    {
+      "id": "dev-accounting-statement-safe",
+      "expectedHit": true,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 7.09779199999997
+    },
+    {
+      "id": "dev-accounting-statement-danger",
+      "expectedHit": false,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 7.269875000000013
+    },
+    {
+      "id": "dev-accounting-exchange-danger",
+      "expectedHit": false,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 7.253209000000027
+    },
+    {
+      "id": "dev-accounting-cash-danger",
+      "expectedHit": false,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 7.540791000000013
+    },
+    {
+      "id": "dev-contact-country-safe",
+      "expectedHit": true,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 6.858500000000049
+    },
+    {
+      "id": "dev-contact-country-danger",
+      "expectedHit": false,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 7.410374999999988
+    },
+    {
+      "id": "dev-contact-support-danger",
+      "expectedHit": false,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 6.404791000000046
+    },
+    {
+      "id": "dev-contact-hours-danger",
+      "expectedHit": false,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 6.8350829999999405
+    },
+    {
+      "id": "test-namespace-same-subject",
+      "expectedHit": false,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 11.41358299999996
+    },
+    {
+      "id": "test-namespace-same-prompt",
+      "expectedHit": false,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 5.5445419999999785
+    },
+    {
+      "id": "test-subject-isolation",
+      "expectedHit": false,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 8.173584000000005
+    },
+    {
+      "id": "test-exact-repeat",
+      "expectedHit": true,
+      "returnedHit": true,
+      "kind": "exact",
+      "namespaceLeak": false
+    },
+    {
+      "id": "dev-billing-plan-safe",
+      "expectedHit": true,
+      "returnedHit": true,
+      "kind": "semantic",
+      "namespaceLeak": false,
+      "latencyMs": 7.636665999999991
+    },
+    {
+      "id": "dev-billing-plan-danger",
+      "expectedHit": false,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 7.157291999999984
+    },
+    {
+      "id": "dev-accounts-profile-safe",
+      "expectedHit": true,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 7.6200000000000045
+    },
+    {
+      "id": "dev-accounts-profile-danger",
+      "expectedHit": false,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 7.307042000000024
+    },
+    {
+      "id": "dev-accounting-receipt-safe",
+      "expectedHit": true,
+      "returnedHit": true,
+      "kind": "semantic",
+      "namespaceLeak": false,
+      "latencyMs": 6.794708000000014
+    },
+    {
+      "id": "dev-accounting-receipt-danger",
+      "expectedHit": false,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 4.804499999999962
+    },
+    {
+      "id": "dev-contact-email-safe",
+      "expectedHit": true,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 7.43587500000001
+    },
+    {
+      "id": "dev-contact-email-danger",
+      "expectedHit": false,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 9.576207999999951
+    },
+    {
+      "id": "dev-general-card-safe",
+      "expectedHit": true,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 6.7610839999999826
+    },
+    {
+      "id": "dev-general-card-danger",
+      "expectedHit": false,
+      "returnedHit": false,
+      "kind": "miss",
+      "namespaceLeak": false,
+      "latencyMs": 7.179790999999909
+    }
+  ],
+  "note": "BANKING77 intent labels are used as a proxy for answer equivalence. Review product-specific answers before enabling reuse."
+}
